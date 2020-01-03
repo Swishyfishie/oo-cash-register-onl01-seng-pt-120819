@@ -27,7 +27,10 @@ class CashRegister
       return "After the discount, the total comes to $#{self.total}."
     end
   end 
-      # binding.pry
+  
+  def items 
+    
+  end 
 end 
 
 

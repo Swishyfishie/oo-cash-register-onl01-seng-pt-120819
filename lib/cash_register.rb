@@ -1,1 +1,51 @@
+require 'pry'
+
+
+class CashRegister 
+  attr_accessor :total, :discount, :quantity
+  
+  
+  def initialize(discount = 0)
+    @total = 0
+    @discount = discount
+  end 
+  
+  def total 
+    @total 
+  end 
+
+  def add_item(title, price, quantity = 1) 
+    quantity == 1 ? self.total+= price : self.total += price * quantity
+  end 
+    
+  def apply_discount
+    total_disc = ((discount.to_f/100) * total).to_i
+    self.total = total.to_i - total_disc
+  end 
+      # binding.pry
+end 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
